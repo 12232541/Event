@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
+
 import Navbar from "./Components/NavBar";
 import Home from "./Components/Home";
 import About from "./Components/About";
@@ -6,6 +8,7 @@ import Features from "./Components/Features";
 import Contact from "./Components/ContactUs";
 import Dynamic from "./Components/Dynamic";
 import Footer from "./Components/Footer";
+
 
 
 function App() {
@@ -20,6 +23,7 @@ function App() {
           <Route path="/features" element={<Features />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/event/:id" element={<Dynamic />} />
+
         </Routes>
       </div>
 <Footer />

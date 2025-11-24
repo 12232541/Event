@@ -29,7 +29,6 @@ const Navbar = () => {
           ☰
         </button>
       </div>
-
       {/* Mobile Menu Dropdown */}
       {open && (
         <ul className="md:hidden bg-blue-700 p-4 flex flex-col gap-3 text-lg">
