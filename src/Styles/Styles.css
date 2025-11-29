@@ -1,0 +1,28 @@
+/* Styles/Styles.css */
+
+/* Eye-catching font: Poppins from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+:root{
+  --baby-blue: #cfeeff;   /* navbar background */
+  --deep-navy: #052a4f;   /* main text */
+  --accent-pink: #ff6b8a; /* button accent */
+  --accent-blue: #0077cc; /* signup button */
+  --menu-muted: #234f70;  /* menu items */
+  --card-bg: #ffffff;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #f7fbff;
+  color: var(--deep-navy);
+  margin: 0;
+  padding: 0;
+}
+
+/* Container utility */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}

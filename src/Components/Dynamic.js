@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-function Dynamic() {
+const Dynamic = () => {
   const { id } = useParams();
 
   const events = [
@@ -34,7 +34,8 @@ function Dynamic() {
     );
   }
 
-  return (
+  return ( 
+    <>
     <div className="p-10 bg-gray-100 min-h-screen">
       <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg">
         <h1 className="text-4xl font-bold text-blue-600 mb-5 text-center">
@@ -53,6 +54,7 @@ function Dynamic() {
         </a>
       </div>
     </div>
+    </>
   );
 }
 

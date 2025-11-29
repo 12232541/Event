@@ -1,4 +1,5 @@
-function Features() {
+
+const Features = () => {
   const events = [
     {
       id: 1,
@@ -21,6 +22,7 @@ function Features() {
   ];
 
   return (
+    <>
     <div className="p-10 bg-gray-100 min-h-screen">
       <h1 className="text-4xl font-bold text-blue-600 text-center mb-10">
         Upcoming Events
@@ -58,6 +60,7 @@ function Features() {
         ))}
       </div>
     </div>
+     </>
   );
 }
 

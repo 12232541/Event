@@ -1,63 +1,61 @@
-function ContactUs() {
+import React from "react";
+import "../Styles/ContactUs.css";
+
+const ContactUs = () => {
   return (
-    <div className="min-h-screen bg-gray-100 p-10 flex items-center justify-center">
-      
-      <div className="bg-white max-w-xl w-full p-10 rounded-2xl shadow-lg">
-        
-        <h1 className="text-4xl font-bold text-blue-600 mb-6 text-center">
-          Contact Us
-        </h1>
+    <div className="contactus-wrapper">
 
-        <form className="space-y-6">
-          {/* Name */}
-          <div>
-            <label className="block text-gray-700 font-semibold mb-2">
-              Full Name
-            </label>
-            <input
-              type="text"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your name"
-            />
-          </div>
-
-          {/* Email */}
-          <div>
-            <label className="block text-gray-700 font-semibold mb-2">
-              Email Address
-            </label>
-            <input
-              type="email"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your email"
-            />
-          </div>
-
-          {/* Message */}
-          <div>
-            <label className="block text-gray-700 font-semibold mb-2">
-              Message
-            </label>
-            <textarea
-              rows="4"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Write your message here..."
-            ></textarea>
-          </div>
-
-          {/* Button */}
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300"
-          >
-            Send Message
-          </button>
-        </form>
-
+      {/* TOP HEADER */}
+      <div className="contactus-header">
+        <h1>Contact Us</h1>
+        <p>Your vision, our mission — Let's create unforgettable moments.</p>
       </div>
 
+      {/* MAIN SECTION */}
+      <div className="contactus-content">
+
+        {/* LEFT CARD */}
+        <div className="contactus-card left-card">
+          <h2>Get In Touch</h2>
+          <p className="contactus-desc">
+            We're here to support you with any event — weddings, proms,
+            parties, corporate events, and more.
+          </p>
+
+          <div className="contactus-info">
+            <p>📞 +961 70 00 00 00</p>
+            <p>📧 eventify.management@gmail.com</p>
+            <p>📍 Beirut, Lebanon</p>
+          </div>
+        </div>
+
+        {/* RIGHT CARD */}
+        <div className="contactus-card right-card">
+          <h2>Send Us a Message</h2>
+
+          <form className="contactus-form">
+            <div className="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="Enter your name" />
+            </div>
+
+            <div className="form-group">
+              <label>Your Email</label>
+              <input type="email" placeholder="Enter your email" />
+            </div>
+
+            <div className="form-group">
+              <label>Your Message</label>
+              <textarea placeholder="Write your message here..."></textarea>
+            </div>
+
+            <button className="contactus-btn">Send Message</button>
+          </form>
+        </div>
+
+      </div>
     </div>
   );
-}
+};
 
 export default ContactUs;

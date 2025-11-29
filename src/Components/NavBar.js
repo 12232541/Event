@@ -1,45 +1,35 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import React, { useState } from "react";
+import "../Styles/NavBar.css";
 
-const Navbar = () => {
+export default function NavBar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="bg-blue-600 text-white p-4 shadow-md">
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
-
-        {/* Logo */}
-        <h1 className="text-xl font-bold">
-          <Link to="/">Event Manager</Link>
-        </h1>
-
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-6 text-lg">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/features">Features</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-2xl"
-          onClick={() => setOpen(!open)}
-        >
-          ☰
-        </button>
+    <nav className="nav">
+      <div className="nav-left">
+        <a href="/" className="logo">Eventify</a>
       </div>
-      {/* Mobile Menu Dropdown */}
-      {open && (
-        <ul className="md:hidden bg-blue-700 p-4 flex flex-col gap-3 text-lg">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/features">Features</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+
+      <div className="nav-center">
+        <ul className="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li className="dropdown" onClick={() => setOpen(!open)}>
+            <span className="drop-btn">Features ▾</span>
+            <ul className={`dropdown-menu ${open ? "show" : ""}`}>
+              <li><a href="/birthdays">Birthdays</a></li>
+              <li><a href="/wedding">Weddings</a></li>
+              <li><a href="/proms">Proms</a></li>
+              <li><a href="/parties">Parties</a></li>
+            </ul>
+          </li>
         </ul>
-      )}
+      </div>
+
+      <div className="nav-right">
+        <a href="/login" className="btn login-btn">Login</a>
+        <a href="/signup" className="btn signup-btn">Sign Up</a>
+      </div>
     </nav>
   );
 }
-
-export default Navbar;

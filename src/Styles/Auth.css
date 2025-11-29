@@ -1,0 +1,75 @@
+/* Center the form on the page */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f2f2f2;
+  padding: 20px;
+}
+
+/* White card box */
+.auth-container {
+  width: 380px;
+  background: white;
+  padding: 30px 35px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
+}
+
+/* Title */
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* Inputs */
+.auth-container input {
+  width: 100%;
+  padding: 12px 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.auth-container input:focus {
+  border-color: #333;
+}
+
+/* Submit button */
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.auth-container button:hover {
+  background: #555;
+}
+
+/* Link */
+.auth-container .switch-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.auth-container .switch-link a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+.auth-container .switch-link a:hover {
+  text-decoration: underline;
+}

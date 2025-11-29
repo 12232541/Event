@@ -1,0 +1,105 @@
+/* Styles/Main.css */
+
+/* NAVBAR WRAPPER */
+.navbar {
+  background-color: var(--baby-blue);
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 3px 12px rgba(6,30,60,0.06);
+}
+
+/* inner container to align items */
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* LOGO */
+.navbar-left { flex: 0 0 auto; }
+.navbar-logo {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--accent-blue);
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+/* MENU - centered style */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 34px;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: var(--menu-muted);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 6px 8px;
+  transition: color .18s, transform .18s;
+  border-radius: 6px;
+}
+
+.navbar-menu a:hover {
+  color: var(--accent-pink);
+  transform: translateY(-2px);
+  background: rgba(255,100,130,0.04);
+}
+
+/* ACTIONS BOX on the right */
+.navbar-actions { flex: 0 0 auto; }
+
+.action-box {
+  display: flex;
+  gap: 10px;
+  padding: 6px;
+  background: rgba(255,255,255,0.55);
+  border-radius: 10px;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 8px rgba(4,25,40,0.04);
+}
+
+/* Buttons styling */
+.action-btn {
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: transform .12s, box-shadow .12s;
+}
+
+/* Login: coral accent (complements baby blue) */
+.action-btn.login {
+  background: transparent;
+  color: var(--deep-navy);
+  border: 1px solid rgba(5,42,79,0.06);
+}
+
+/* SignUp: stronger blue accent */
+.action-btn.signup {
+  background: var(--accent-blue);
+  color: white;
+  box-shadow: 0 6px 14px rgba(0,119,204,0.18);
+}
+
+.action-btn:hover { transform: translateY(-2px); }
+
+/* Small screens: collapse spacing */
+@media (max-width: 720px) {
+  .navbar-menu { gap: 18px; font-size: 14px; }
+  .navbar-logo { font-size: 18px; }
+  .action-box { padding: 4px; gap: 8px; }
+}

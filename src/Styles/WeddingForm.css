@@ -1,0 +1,70 @@
+/* Container */
+.wedding-container {
+  width: 60%;
+  margin: 40px auto;
+  background: #0e0e0e;
+  padding: 40px;
+  border-radius: 25px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.wedding-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  background: linear-gradient(to right, #ff5858, #ff8e16);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Form Layout */
+.wedding-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Labels */
+.wedding-form label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* Inputs */
+.wedding-form input,
+.wedding-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+/* Textarea height */
+.wedding-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Submit Button */
+.submit-btn {
+  margin-top: 10px;
+  padding: 14px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(to right, #ff5858, #ff8e16);
+  font-weight: bold;
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+  opacity: 0.85;
+}
